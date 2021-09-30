@@ -1,0 +1,5 @@
+<form #myForm="ngForm">
+    <input type="text" required id="newGlover" name="newGlover" [(ngModel)]="newGlover">
+
+    <button class="add-button" (click)="addGlover()" [disabled]="!myForm.valid">ADD</button>
+</form>

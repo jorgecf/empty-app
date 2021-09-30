@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-3">
+        <table id="glovers-table" class="table" *ngIf="gloversList.length > 0">
+            <tbody>
+                <tr *ngFor="let glover of gloversList; let idx = index">
+                    <td>
+                        <div class="glover-name">{{ glover.name }}</div>
+                    </td>
+                    <td class="border-left">
+                        <button [id]="'remove-button-' + idx" class="remove-button float-right"
+                            (click)="removeGlover(glover.id)">REMOVE</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <span class="empty-warning" *ngIf="gloversList.length == 0">No glovers</span>
+    </div>
+</div>

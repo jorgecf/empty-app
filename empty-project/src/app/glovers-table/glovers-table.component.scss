@@ -1,0 +1,19 @@
+$color: #d3d3d3;
+
+.float-right {
+    float: right;
+}
+
+.glover-name {
+    display: inline-block;
+}
+
+table {
+    border: 1px solid $color;
+
+    td {
+        &.border-left {
+            border-left: 1px solid $color;
+        }
+    }
+}
