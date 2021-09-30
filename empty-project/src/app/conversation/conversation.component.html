@@ -1,0 +1,16 @@
+<div class="row">
+
+    <div class="col-12">
+        <app-header [name]="state.conversation[conversationIndex].name"></app-header>
+    </div>
+
+    <div class="col-12">
+        <ng-container *ngFor="let msg of state.conversation[conversationIndex].messages">
+            <app-message [content]="msg.content" [ownMessage]="state.currentUser == msg.user"></app-message>
+        </ng-container>
+    </div>
+
+    <div class="col-12">
+        <app-footer (newMessageEvent)="newMessageCallback($event)"></app-footer>
+    </div>
+</div>

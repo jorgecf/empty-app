@@ -1,0 +1,9 @@
+<form #form="ngForm" class="row">
+    <div class="col-9">
+        <input required type="text" [(ngModel)]="newMessage" id="newMessage" name="newMessage">
+    </div>
+
+    <div class="col-3">
+        <button [disabled]="!form.valid" (click)="sendMessage()">SEND</button>
+    </div>
+</form>
